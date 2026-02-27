@@ -4,7 +4,7 @@ from collections import defaultdict
 import cv2
 import tempfile
 
-model = YOLO("yolo26x.pt")
+model = YOLO("yolo26n.pt")
 video_file = st.file_uploader("Bir Video Yükleyin", type=["mp4","avi","mkv"])
 
 if video_file is not None:
@@ -50,5 +50,6 @@ if video_file is not None:
     total_unique_ids = set()
     for ids in class_counts.values():
         total_unique_ids.update(ids)
+
 
     st.write("Toplam geçen nesne sayısı:", len(total_unique_ids))

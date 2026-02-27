@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import numpy as np
 import os
 
-paths=r"C:\Users\dkadi\YOLO\Yayın\yolo26n.pt"
+paths="yolo26n.pt"
 model_path=os.path.join(os.path.dirname(__file__), paths)
 model=YOLO(model_path)
 
@@ -33,4 +33,5 @@ if uploade_file is not None:
         
         
         
+
         
